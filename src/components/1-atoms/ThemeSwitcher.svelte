@@ -1,6 +1,7 @@
 <script>
   import { theme } from '../../stores/themeStore.js';
-  
+  import LuaIcon from '$lib/icons/LuaIcon.svelte';
+  import SolIcon from '$lib/icons/SolIcon.svelte';
 
   function toggleTheme() {
     theme.update(currentValue => {
@@ -11,15 +12,15 @@
 
 <button on:click={toggleTheme}>
   {#if $theme === 'light'}
-    Escuro
+    <LuaIcon/>
   {:else}
-    Claro
+    <SolIcon/>
   {/if}
 </button>
 
 <style>
   button {
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 12px;
     border: solid 3px;
     border-color: var(--borda-sutil);
@@ -30,5 +31,11 @@
   }
   button:hover {
     background-color: var(--fundo-hover);
+  }
+
+  :global(button svg) {
+    width: 24px;
+    height: 24px;
+    color: var(--borda-sutil);
   }
 </style>
