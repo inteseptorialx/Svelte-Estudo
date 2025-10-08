@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+
+:root {
+  /* --- PALETAS MESTRAS ANTIGAS (Pode apagar se quiser) --- */
+  --gray-100: #f8f9fa;
+  --gray-500: #adb5bd;
+  --blue-900: #0d1117;
+  --blue-500: #48515a;
+
+  /* --- NOVAS PALETAS MESTRAS --- */
+  --creme-100: #f5f5dc;
+  --creme-200: #eaeadd;
+  --creme-300: #ddd5c6;
+  --creme-400: #c4beb5;
+  --creme-500: #a8a299;
+
+  --marinho-900: #0a192f;
+  --marinho-800: #112240;
+  --marinho-700: #233554;
+  --marinho-600: #3e5275;
+  --marinho-500: #8892b0;
+
+  /* --- VARIÁVEIS DE UTILIDADE --- */
+  --canto-sm: 6px;
+  --canto-m: 12px;
+  --canto-g: 24px;
+  --transicao-padrao: background-color 0.3s ease, color 0.3s ease;
+
+  /* --- SISTEMA TIPOGRÁFICO --- */
+  --font-family-principal: "Poppins", sans-serif;
+
+  --font-weight-logo: 900;
+  --font-weight-titulo: 700;
+  --font-weight-subtitulo: 500;
+  --font-weight-conteudo: 400;
+  --font-weight-subconteudo: 300;
+}
+
+body.light {
+  /* --- CORES DE DESTAQUE (TEMA CLARO) --- */
+  --vermelho: #c92a2a;
+  --amarelo: #e67700;
+  --verde: #2f9e44;
+  --azul: #1971c2;
+
+  /* --- NOMES SEMÂNTICOS (TEMA CLARO ATUALIZADO) --- */
+  --fundo-principal: var(--creme-100);
+  --fundo-secundario: var(--creme-200);
+  --fundo-hover: var(--creme-300);
+  --borda-sutil: var(--creme-400);
+  --texto-principal: var(--marinho-900);
+  --texto-secundario: var(--marinho-500);
+
+  font-family: var(--font-family-principal);
+  font-weight: var(
+    --font-weight-conteudo
+  ); /* Define o 400 como padrão para o site */
+}
+
+h1,
+h2 {
+  font-weight: var(--font-weight-titulo); /* Títulos usarão o peso 700 */
+}
+
+h3,
+h4 {
+  font-weight: var(--font-weight-subtitulo); /* Subtítulos usarão o peso 500 */
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--texto-principal);
+}
+
+/* Exemplo de uma classe para seu logo */
+.logo-texto {
+  font-weight: var(--font-weight-logo);
+}
+
+/* Exemplo de uma classe para textos secundários */
+.texto-subconteudo {
+  font-weight: var(--font-weight-subconteudo);
+}
+
+body.dark {
+  /* --- CORES DE DESTAQUE (TEMA ESCURO) --- */
+  --vermelho: #ff8787;
+  --amarelo: #ffc078;
+  --verde: #8ce99a;
+  --azul: #74c0fc;
+
+  /* --- NOMES SEMÂNTICOS (TEMA ESCURO ATUALIZADO) --- */
+  --fundo-principal: var(--marinho-900);
+  --fundo-secundario: var(--marinho-800);
+  --fundo-hover: var(--marinho-700);
+  --borda-sutil: var(--marinho-600);
+  --texto-principal: var(--creme-200);
+  --texto-secundario: var(--marinho-500);
+
+  font-family: var(--font-family-principal);
+  font-weight: var(
+    --font-weight-conteudo
+  ); /* Define o 400 como padrão para o site */
+}
+
+body {
+  background-color: var(--fundo-principal);
+}
